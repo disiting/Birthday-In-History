@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Birthday in History</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Birthday in History</h1>
+
+        <form id="js-form">
+            <label>Enter date</label>
+            <select id="js-month" name="month" class="month" required>
+                <option value="">Month</option>
+            </select>
+            <select id="js-day" class="day" required>
+                <option value="">Day</option>
+            </select>
+            <select id="js-year" class="year" required>
+                <option value="">Year</option>
+            </select>
+            <input type="submit" value="Go!">
+        </form>
+
+        <p id="js-error-message" class="error-message"></p>    
+
+        <section id="menu" class="hidden"<p class="info">Find out why your birth date is so special! Click on "Articles" to see what was happenning in the world the day you were born, according to "New York Times." Click on "Events" to see your birth date in history: all the important events by year starting BC!</p><span id="menu-articles" class="link">Articles</span> <span id="menu-events" class="link">Events</span></section>
+        <section id="results-articles" class="hidden"></section>
+        <section id="results-events" class="hidden"></section>
+        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
