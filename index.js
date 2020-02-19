@@ -131,16 +131,21 @@ function watchMenu() {
   $("#results-articles").addClass("hidden");
   $("#results-events").addClass("hidden");
   $("#menu").removeClass("hidden");
+  
 
 
   $('body').on('click', '#menu-articles', function (event) {
     $("#results-events").addClass("hidden");
     $("#results-articles").removeClass("hidden");
+    $(".menu-buttons input").removeClass("active");
+    $(this).addClass("active");
   });
   
   $('body').on('click', '#menu-events', function (event) {
     $("#results-articles").addClass("hidden");
     $("#results-events").removeClass("hidden");
+    $(".menu-buttons input").removeClass("active");
+    $(this).addClass("active");
   });
 }
 

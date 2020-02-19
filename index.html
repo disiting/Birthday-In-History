@@ -7,6 +7,7 @@
     <title>Your Birthday in History</title>
     <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="index.css">
+    
 </head>
 <body>
     <div class="container">
@@ -14,25 +15,65 @@
 
         <form id="js-form">
             <label>Enter date</label>
-            <select id="js-month" name="month" class="month" required>
+            <select id="js-month" name="month" class="month date-select" required>
                 <option value="">Month</option>
             </select>
-            <select id="js-day" class="day" required>
+            <select id="js-day" class="day date-select" required>
                 <option value="">Day</option>
             </select>
-            <select id="js-year" class="year" required>
+            <select id="js-year" class="year date-select" required>
                 <option value="">Year</option>
             </select>
-            <input type="submit" value="Go!">
+            <input type="submit" value="Go!" class="date-select">
         </form>
 
         <p id="js-error-message" class="error-message"></p>    
 
-        <section id="menu" class="hidden"<p class="info">Find out why your birth date is so special! Click on "Articles" to see what was happenning in the world the day you were born, according to "New York Times." Click on "Events" to see your birth date in history: all the important events by year starting BC!</p><span id="menu-articles" class="link">Articles</span> <span id="menu-events" class="link">Events</span></section>
-        <section id="results-articles" class="hidden"></section>
-        <section id="results-events" class="hidden"></section>
+        <section id="menu" class="hidden noprint">
+            <p class="info">Click on "Articles" or "Events" to take a glimpse into the past</p>
+            <div class="menu-buttons">
+                <input type="button" id="menu-articles" name="menu-articles" class="menu-input" value="Articles">
+                <input type="button" id="menu-events" name="menu-events" class="menu-input" value="Events">
+            </div>
+        </section>
+        <section id="results-articles" class="hidden print results"></section>
+        <section id="results-events" class="hidden print results"></section>
+
         
+        
+        <div class="footer noprint">
+            <div class="socialmedia">
+                <div>
+                    <script>window.twttr = (function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0],
+                            t = window.twttr || {};
+                        if (d.getElementById(id)) return t;
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = "https://platform.twitter.com/widgets.js";
+                        fjs.parentNode.insertBefore(js, fjs);
+                        
+                        t._e = [];
+                        t.ready = function(f) {
+                            t._e.push(f);
+                        };
+                        
+                        return t;
+                        }(document, "script", "twitter-wjs"));</script>
+                    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Your%20Birthday%20in%20History" data-url="https://disiting.github.io/Birthday-In-History/" data-size="large">Tweet</a>
+                </div>
+                <div>
+                    <div id="fb-root"></div>
+                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
+                    <div class="fb-share-button" data-href="https://disiting.github.io/Birthday-In-History/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdisiting.github.io%2FBirthday-In-History%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+                </div>
+                <div>
+                    <img src="print.png" class="image-print" onclick="window.print();">
+                </div>
+            </div>
+        </div>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>

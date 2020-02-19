@@ -6,6 +6,10 @@
     font-family: 'Roboto', sans-serif;
   }
   
+  body h1, form, .info {
+    text-align: center;
+  }
+
   button, input[type="text"] {
     padding: 5px;
   }
@@ -27,9 +31,75 @@
     display: none;
   }
 
-  .link {
-    cursor: pointer;
-    text-decoration: underline;
+  ul {
+    list-style-type: none;
+  }
+  ul li {
+    padding: 10px 0;
   }
 
+  .results {
+    margin-bottom: 50px;
+  }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #fff;
+    text-align: center;
+ }
+
+  .date-select {
+    border: solid 1px #555;
+    padding: 5px 15px;
+    margin: 0 7px;
+    border-radius: 3px;
+    font-size: 16px;
+    color:#555;
+  }
+
+  .menu-buttons {
+    text-align:center;
+  }
+
+  .menu-buttons input {
+    cursor: pointer;
+    border: solid 1px #999;
+    padding: 7px 20px;
+    margin: 0 10px;
+    border-radius: 3px;
+    font-size: 16px;
+    color:#555;
+  } 
+
+  .menu-buttons input.active {
+    color:#000;
+    border-color: #000;
+    font-weight: bold;
+  } 
+
+  .socialmedia {
+    text-align:center;
+  }
+  .socialmedia>div {
+    display:inline-block;
+    margin: 0 10px;
+    vertical-align: top;
+  }
+
+  .image-print {
+    cursor: pointer;
+  }
   
+
+@media print {
+  .print {
+    display: block;
+  }
+  .noprint {
+    display: none;
+  }
+}
