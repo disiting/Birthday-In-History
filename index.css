@@ -2,26 +2,88 @@
     box-sizing: border-box;
   }
   
-  body {
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  body h1, form, .info {
-    text-align: center;
-  }
+body {
+  font-family: Verdana, sans-serif;
+  background-color: #eee;
+}
 
-  button, input[type="text"] {
-    padding: 5px;
-  }
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.info {
+  text-align: center;
+}
+
+.discover {
+  margin-top:40px;
+  font-weight: bold;
+  font-size: 48px;
+  padding:0;
+}
+
+h1 {
+  font-weight: normal;
+  padding:0;
+  margin:0 0 40px 0;
+  color: #777;
+  font-size: 38px;
+  text-transform: lowercase;
+}
+
+.form {
+  margin: 50px 0;
+  padding: 20px;
+  border: solid 1px #999;
+  background-color: #ddd;
+  border-radius: 7px;
+
+}
+
+
+.menu-buttons {
+  margin-bottom: 50px;
+}
+
+.menu-button {
+  display: inline-block;
+  cursor: pointer;
+  border: solid 1px #999;
+  padding: 10px 24px;
+  margin: 0 12px;
+  border-radius: 3px;
+  font-size: 16px;
+  color:#555;
+  background-color: #ddd;
+  vertical-align: middle;
+} 
+
+.menu-button img {
+  vertical-align: middle;
+}
+
+.menu-button span {
+  vertical-align: middle;
+}
+.menu-button.active {
+  color:#000;
+  border-color: #000;
+  font-weight: bold;
+} 
+
+
+
+
+
+button, input[type="text"] {
+  padding: 5px;
+}
   
   button:hover {
     cursor: pointer;
   }
   
-  .container {
-    max-width: 600px;
-    margin: 0 auto;
-  }
   
   .error-message {
       color: red;
@@ -31,11 +93,15 @@
     display: none;
   }
 
-  ul {
+  .results ul {
     list-style-type: none;
   }
-  ul li {
-    padding: 10px 0;
+  .results ul li {
+    padding: 10px;
+    margin: 20px 0;
+    border: solid 1px #999;
+    background-color: #ddd;
+    border-radius: 7px;
   }
 
   .results {
@@ -65,21 +131,6 @@
     text-align:center;
   }
 
-  .menu-buttons input {
-    cursor: pointer;
-    border: solid 1px #999;
-    padding: 7px 20px;
-    margin: 0 10px;
-    border-radius: 3px;
-    font-size: 16px;
-    color:#555;
-  } 
-
-  .menu-buttons input.active {
-    color:#000;
-    border-color: #000;
-    font-weight: bold;
-  } 
 
   .socialmedia {
     text-align:center;

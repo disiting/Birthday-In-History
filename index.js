@@ -67,9 +67,8 @@ function displayArticlesResults(responseJson, month, day, year) {
 
     for (let i = 0; i < responseJson.response.docs.length; i++){
       $('#results-articles-list').append(
-        `<li><h3>${responseJson.response.docs[i].headline.main}</h3>
+        `<li><h3><a href="${responseJson.response.docs[i].web_url}" target="_blank">${responseJson.response.docs[i].headline.main}</a></h3>
         <p>${responseJson.response.docs[i].snippet}</p>
-        <a href="${responseJson.response.docs[i].web_url}" target="_blank">${responseJson.response.docs[i].web_url}</a>
         </li>`
       )};
 };
@@ -131,20 +130,20 @@ function watchMenu() {
   $("#results-articles").addClass("hidden");
   $("#results-events").addClass("hidden");
   $("#menu").removeClass("hidden");
-  
+  $(".menu-button").removeClass("active");
 
 
   $('body').on('click', '#menu-articles', function (event) {
     $("#results-events").addClass("hidden");
     $("#results-articles").removeClass("hidden");
-    $(".menu-buttons input").removeClass("active");
+    $(".menu-button").removeClass("active");
     $(this).addClass("active");
   });
   
   $('body').on('click', '#menu-events', function (event) {
     $("#results-articles").addClass("hidden");
     $("#results-events").removeClass("hidden");
-    $(".menu-buttons input").removeClass("active");
+    $(".menu-button").removeClass("active");
     $(this).addClass("active");
   });
 }
@@ -153,5 +152,30 @@ function watchMenu() {
 
 
 
+
+
 renderDate();
 $(watchForm);
+
+
+
+
+
+
+
+$(window).scroll(function() {
+  let height = $(window).scrollTop();
+  if (height > 100) {
+      $('#totop').fadeIn();
+  } else {
+      $('#totop').fadeOut();
+  }
+});
+$(document).ready(function() {
+  $("#totop").click(function(event) {
+      event.preventDefault();
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+      return false;
+  });
+
+});
