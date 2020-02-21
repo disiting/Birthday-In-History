@@ -149,18 +149,8 @@ function watchMenu() {
 }
 
 
-
-
-
-
-
 renderDate();
 $(watchForm);
-
-
-
-
-
 
 
 $(window).scroll(function() {

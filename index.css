@@ -4,7 +4,7 @@
   
 body {
   font-family: Verdana, sans-serif;
-  background-color: #eee;
+  background-color: #fed200;
 }
 
 .container {
@@ -36,11 +36,18 @@ h1 {
   margin: 50px 0;
   padding: 20px;
   border: solid 1px #999;
-  background-color: #ddd;
+  background-color: #5C6060;
   border-radius: 7px;
-
+  color: white;
 }
 
+.date-select.btn-go {
+  background-color: #d74a02;
+  color: black;
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 7px;
+}
 
 .menu-buttons {
   margin-bottom: 50px;
@@ -54,7 +61,7 @@ h1 {
   margin: 0 12px;
   border-radius: 3px;
   font-size: 16px;
-  color:#555;
+  color:black;
   background-color: #ddd;
   vertical-align: middle;
 } 
@@ -70,6 +77,7 @@ h1 {
   color:#000;
   border-color: #000;
   font-weight: bold;
+  background-color: #A2A3A1;
 } 
 
 
@@ -95,9 +103,11 @@ button, input[type="text"] {
 
   .results ul {
     list-style-type: none;
+    padding: 0;
   }
+  
   .results ul li {
-    padding: 10px;
+    padding: 5px 15px;
     margin: 20px 0;
     border: solid 1px #999;
     background-color: #ddd;
@@ -106,6 +116,10 @@ button, input[type="text"] {
 
   .results {
     margin-bottom: 50px;
+  }
+
+  .results a {
+    color: #000000;
   }
 
   .footer {
@@ -144,6 +158,11 @@ button, input[type="text"] {
   .image-print {
     cursor: pointer;
   }
+
+  #totop {
+    color: #000;
+    text-decoration: none;
+  }
   
 
 @media print {
@@ -151,6 +170,6 @@ button, input[type="text"] {
     display: block;
   }
   .noprint {
-    display: none;
+    display: none; 
   }
 }
