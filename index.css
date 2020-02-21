@@ -39,12 +39,24 @@ h1 {
   background-color: #5C6060;
   border-radius: 7px;
   color: white;
+  display: inline-block;
+  text-align: center;
 }
 
+.date-select {
+  border: solid 1px #555;
+  padding: 5px 15px;
+  margin: 5px;
+  border-radius: 3px;
+  font-size: 16px;
+  color:#555;
+
+}
+
+
 .date-select.btn-go {
-  background-color: #d74a02;
+  background: linear-gradient(-135deg, #f36e2b 0%, #d74a02 100%);
   color: black;
-  font-weight: bold;
   font-size: 24px;
   border-radius: 7px;
 }
@@ -119,7 +131,8 @@ button, input[type="text"] {
   }
 
   .results a {
-    color: #000000;
+    color: #0038cd;
+    text-decoration: none;
   }
 
   .footer {
@@ -132,14 +145,6 @@ button, input[type="text"] {
     text-align: center;
  }
 
-  .date-select {
-    border: solid 1px #555;
-    padding: 5px 15px;
-    margin: 0 7px;
-    border-radius: 3px;
-    font-size: 16px;
-    color:#555;
-  }
 
   .menu-buttons {
     text-align:center;
