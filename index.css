@@ -1,10 +1,12 @@
 * {
     box-sizing: border-box;
+    font-family: Verdana, sans-serif;
+    color: #222;
   }
   
 body {
-  font-family: Verdana, sans-serif;
-  background-color: #fed200;
+  
+  background-color: white;
 }
 
 .container {
@@ -13,7 +15,11 @@ body {
 }
 
 .info {
-  text-align: center;
+  text-align: left;
+  font-size: 18px;
+  color: #222;
+  margin: 20px 0;
+  padding-left: 10px;
 }
 
 .discover {
@@ -21,26 +27,34 @@ body {
   font-weight: bold;
   font-size: 48px;
   padding:0;
+  color: #002655;
 }
 
 h1 {
   font-weight: normal;
   padding:0;
-  margin:0 0 40px 0;
-  color: #777;
+  margin:0 0 30px 0;
+  color: #002655;
   font-size: 38px;
   text-transform: lowercase;
 }
 
+h1>span{
+  color: #ffaf01;
+}
+
 .form {
-  margin: 40px 0;
+  margin: 30px 0;
   padding: 20px;
-  border: solid 1px #999;
+  border: solid 1px #555;
   background-color: #5C6060;
   border-radius: 7px;
-  color: white;
   display: inline-block;
   text-align: center;
+}
+
+.form>label {
+  color: #fff;
 }
 
 .date-select {
@@ -49,31 +63,30 @@ h1 {
   margin: 5px;
   border-radius: 3px;
   font-size: 16px;
-  color:#555;
-
 }
 
 
 .date-select.btn-go {
-  background: linear-gradient(-135deg, #f36e2b 0%, #d74a02 100%);
-  color: black;
-  font-size: 24px;
-  border-radius: 7px;
+  background: #ffaf01;
+  color: #002655;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .menu-buttons {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .menu-button {
   display: inline-block;
   cursor: pointer;
-  border: solid 1px #999;
+  border: solid 1px #555;
+  width: 150px;
   padding: 10px 24px;
   margin: 0 12px;
   border-radius: 3px;
   font-size: 16px;
-  color:black;
+  color: #222;
   background-color: #ddd;
   vertical-align: middle;
 } 
@@ -85,15 +98,13 @@ h1 {
 .menu-button span {
   vertical-align: middle;
 }
+
 .menu-button.active {
   color:#000;
-  border-color: #000;
+  border-color: #222;
   font-weight: bold;
   background-color: #A2A3A1;
 } 
-
-
-
 
 
 button, input[type="text"] {
@@ -121,7 +132,7 @@ button, input[type="text"] {
   .results ul li {
     padding: 5px 15px;
     margin: 20px 0;
-    border: solid 1px #999;
+    border: solid 1px #555;
     background-color: #ddd;
     border-radius: 7px;
   }
@@ -130,8 +141,12 @@ button, input[type="text"] {
     margin-bottom: 50px;
   }
 
+  .results>h2 {
+    color: #222;
+  }
+
   .results a {
-    color: #0038cd;
+    color: #002655;
     text-decoration: none;
   }
 
@@ -165,7 +180,7 @@ button, input[type="text"] {
   }
 
   #totop {
-    color: #000;
+    color: #222;
     text-decoration: none;
   }
   
@@ -176,5 +191,15 @@ button, input[type="text"] {
   }
   .noprint {
     display: none; 
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .form {
+    margin: 50px 0;
+  }
+
+  h1 {
+    margin:0 0 40px 0;
   }
 }
