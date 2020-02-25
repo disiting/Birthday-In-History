@@ -6,12 +6,12 @@ User enters birthday and clicks "Go". The app shows two options: "Articles" and 
 [https://disiting.github.io/Birthday-In-History/]
 ## Here is What It Looks Like
 ### Landing Page
-![Landing Page](Landing.jpg)
+![Landing Page](Images/Landing.JPG)
 ### Toggle Between Events and Articles
-![Toggle Buttons](Toggle.jpg)
+![Toggle Buttons](Images/Toggle.JPG)
 ### Articles
-![NYT Articles](Articles.jpg)
+![NYT Articles](Images/Articles.JPG)
 ### Events
-![Events](Events.jpg)
+![Events](Images/Events.JPG)
 ## Built With
 HTML, CSS, JavaScript, jQuery
