@@ -125,6 +125,7 @@ function watchForm() {
   });
 }
 
+// Events/Articles results toggle menu
 function watchMenu() {
   
   $("#results-articles").addClass("hidden");
@@ -152,7 +153,7 @@ function watchMenu() {
 renderDate();
 $(watchForm);
 
-
+// This adds "back to top" button if user scrolls down to view the results
 $(window).scroll(function() {
   let height = $(window).scrollTop();
   if (height > 100) {
@@ -161,6 +162,8 @@ $(window).scroll(function() {
       $('#totop').fadeOut();
   }
 });
+
+// Event listener for "back to top" button
 $(document).ready(function() {
   $("#totop").click(function(event) {
       event.preventDefault();

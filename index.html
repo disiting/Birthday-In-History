@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:image" content="Images/ogimage.JPG">
     <title>Your Birthday in History</title>
     <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="favicon.ico">
     
 </head>
 <body>
@@ -30,15 +32,15 @@
 
         <p id="js-error-message" class="error-message"></p>    
 
-        <section id="menu" class="hidden noprint">
+        <div id="menu" class="hidden noprint">
             <p class="info">Click on "Articles" or "Events" to take a glimpse into the past</p>
             <div class="menu-buttons">
-                <div id="menu-articles" class="menu-button"><img src="Images/icon_newspaper.png"> <span>Articles</span></div>
-                <div id="menu-events" class="menu-button"><img src="Images/icon_calendar.png"> <span>Events</span></div>
+                <div id="menu-articles" class="menu-button"><img src="Images/icon_newspaper.png" alt="newspaper icon"> <span>Articles</span></div>
+                <div id="menu-events" class="menu-button"><img src="Images/icon_calendar.png" alt="calendar icon"> <span>Events</span></div>
             </div>
-        </section>
-        <section id="results-articles" class="hidden print results"></section>
-        <section id="results-events" class="hidden print results"></section>
+        </div>
+        <div id="results-articles" class="hidden print results"></div>
+        <div id="results-events" class="hidden print results"></div>
 
         
         
@@ -69,9 +71,9 @@
                     <div class="fb-share-button" data-href="https://disiting.github.io/Birthday-In-History/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdisiting.github.io%2FBirthday-In-History%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
                 </div>
                 <div>
-                    <img src="Images/print.png" class="image-print" onclick="window.print();">
+                    <img src="Images/print.png" alt="printer icon" class="image-print" onclick="window.print();">
                 </div>
-                <div><a id="totop" title="Back to top" href="#" class="hidden"><img src="Images/totop.png">Back</a></div>
+                <div><a id="totop" title="Back to top" href="#" class="hidden"><img src="Images/totop.png" alt="back to top icon">Back</a></div>
             </div>
         </div>
     </div>
