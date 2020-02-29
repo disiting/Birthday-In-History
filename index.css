@@ -53,6 +53,10 @@ h1>span{
   text-align: center;
 }
 
+.form > * {
+  width: 100%;
+}
+
 .form>label {
   color: #fff;
 }
@@ -83,7 +87,7 @@ h1>span{
   border: solid 1px #555;
   width: 150px;
   padding: 10px 24px;
-  margin: 0 12px;
+  margin: 3px 12px;
   border-radius: 3px;
   font-size: 16px;
   color: #222;
@@ -171,7 +175,7 @@ button, input[type="text"] {
   }
   .socialmedia>div {
     display:inline-block;
-    margin: 0 10px;
+    margin: 0 3px;
     vertical-align: top;
   }
 
@@ -194,7 +198,16 @@ button, input[type="text"] {
   }
 }
 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 600px) {
+.socialmedia>div {
+  margin: 0 10px;
+  }
+.form > * {
+  width: auto;
+  }
+}  
+
+@media screen and (min-width: 768px) {
   .form {
     margin: 50px 0;
   }

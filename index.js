@@ -29,6 +29,8 @@ function renderDate() {
         <option value="${i}">${i}</option>
     `);
   }
+  $('#js-month').on('change', setDays);
+  $('#js-year').on('change', setDays);
 }
 
 function formatQueryParams(params) {
@@ -73,9 +75,6 @@ function displayArticlesResults(responseJson, month, day, year) {
       )};
 };
 
-
-
-
 function getEvents(month, day, year) {
     let url = searchURLByabbe
     url = url.replace('{month}',parseInt(month));
@@ -92,7 +91,6 @@ function getEvents(month, day, year) {
       .catch(err => {
       $('#js-error-message').text(`Something went wrong: ${err.message}`);
     });
-
 }
 
 function displayEventsResults(responseJson, month, day, year) {
@@ -103,7 +101,7 @@ function displayEventsResults(responseJson, month, day, year) {
   
     for (let i = 0; i < responseJson.events.length; i++){
       $('#results-events-list').append(
-        `<li><h3>${responseJson.events[i].year}</h3>
+        `<li><h3>On your birthday in year ${responseJson.events[i].year}</h3>
         <p>${responseJson.events[i].description}</p>
         </li>`
       )};
@@ -113,12 +111,15 @@ function displayEventsResults(responseJson, month, day, year) {
 function watchForm() {
   $('form').submit(event => {
     event.preventDefault();
+    //reset page
+    $('#results-articles').empty();
+    $('#results-events').empty();
+    $('#js-error-message').empty();
 
     const month = $("#js-month").val();
     const day = $("#js-day").val();
     const year = $("#js-year").val();
 
-    
     getArticles(month, day, year);
     getEvents(month, day, year);
     watchMenu();
@@ -149,6 +150,46 @@ function watchMenu() {
   });
 }
 
+function setDays() {
+  let month = document.querySelector('#js-month').value;
+  let year = document.querySelector('#js-year').value;
+  switch (month) {
+    case '04':
+    case '06':
+    case '09':
+    case '11':
+      limitDaysTo(30);
+      break;
+    case '02':
+      isLeapYear(year) ? limitDaysTo(29) : limitDaysTo(28);
+      break;
+    default:
+      limitDaysTo(31);
+  }
+}
+
+function limitDaysTo(num) {
+  let days = document.querySelector('#js-day'),
+      daysOptions = document.querySelectorAll('#js-day option');
+  //reset hidden days
+  for (let i = 31; i > 28; i--) {
+    daysOptions[i].classList.remove("hidden");
+  }
+  if (num === 31) return;
+  //hide days
+  for (let i = 31; i > num; i--) {
+    daysOptions[i].classList.add("hidden");
+  }
+  //if selected day is going to be hidden
+  //select last day of the month
+  if (Number(days.value) > Number(num)) {
+    days.value = num;
+  }
+}
+
+function isLeapYear(yr) {
+  return !((yr % 4) || (!(yr % 100) && (yr % 400)));
+}
 
 renderDate();
 $(watchForm);
